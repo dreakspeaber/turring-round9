@@ -1,12 +1,16 @@
 # Detailed Deep Analysis of System Messages for LLM Trainer Tasks
 
-# System Message should be minimum of 11K character in length.
+
 
 This document synthesizes the findings from the individual task analyses to provide a set of "liquid gold" insights and actionable tips for LLM trainers. The primary goal is to move beyond simple analysis and to understand the art of constructing system messages (SMs) that test the boundaries of a model's capabilities.
 
 The core philosophy is that for training a robust, tool-using agent, success is good, but strategic failure is better. A well-designed SM should create complex scenarios that push the model to the edge of its capacity, causing it to fail in predictable ways. These failures, when corrected, provide invaluable training data, teaching the model to handle nuance, ambiguity, and complex multi-step automation.
 
 ## Key Principles of Effective System Message Construction (The "Edge Case" Framework)
+
+# System Message should be minimum of 11K character in length.
+
+System message should be written in a way that intends on providing tailored complex workflow automation and assistance for the user; but the workflow complexity not overtly mentioned but will be designed in a way that push the model to failure (But this never should be mentioned out in the SM). The SM should only be instructive; with the users overt hope as assistance and workflow automation; but the convert aim is to push the model to the boundaries where it fails to accomplish its said objective, and we correct the model response, creating a valuable training data corpus. 
 
 Based on the analysis, several key principles are critical for constructing SMs that effectively test and train a model.
 
